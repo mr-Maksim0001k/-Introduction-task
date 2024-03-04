@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import { config } from "./config.js";
 
 const app = express();
 
@@ -8,9 +9,7 @@ const port = 3333;
 app.use(express.json());
 
 mongoose
-  .connect(
-    "mongodb+srv://admin:wwwwww@cluster0.ozuteyw.mongodb.net/todoList?retryWrites=true&w=majority"
-  )
+  .connect(config.DB_URL)
   .then(() => console.log("DB okey"))
   .catch((err) => console.log("db error", err));
 

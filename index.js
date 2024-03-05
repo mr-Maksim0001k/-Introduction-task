@@ -13,6 +13,8 @@ mongoose
   .then(() => console.log("DB okey"))
   .catch((err) => console.log("db error", err));
 
+app.get("/api/students");
+
 app.listen(port, (err) => {
   if (err) {
     console.log(err);

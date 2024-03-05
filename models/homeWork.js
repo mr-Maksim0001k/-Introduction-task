@@ -9,8 +9,8 @@ const homeWorkSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  dueData: {
-    type: Data,
+  dueDate: {
+    type: Date,
     required: true,
   },
 
@@ -21,4 +21,4 @@ const homeWorkSchema = new mongoose.Schema({
   },
 });
 
-export const homeWork = mongoose.model("homeWork", homeWorkSchema);
+export const HomeWork = mongoose.model("HomeWork", homeWorkSchema);

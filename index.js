@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import { config } from "./config.js";
+import { getAllStudent, addStudent } from "./controllers/studentsController.js";
 
 const app = express();
 
@@ -13,7 +14,9 @@ mongoose
   .then(() => console.log("DB okey"))
   .catch((err) => console.log("db error", err));
 
-app.get("/api/students");
+app.get("/api/students", getAllStudent);
+
+app.post("/api/students", addStudent);
 
 app.listen(port, (err) => {
   if (err) {

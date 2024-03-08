@@ -13,8 +13,7 @@ const homeWorkSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
-
-  stydentId: {
+  studentId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Student",
     required: true,
